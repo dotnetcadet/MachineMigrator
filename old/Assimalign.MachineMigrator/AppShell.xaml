@@ -1,0 +1,21 @@
+<Shell 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Assimalign.MachineMigrator"
+    x:Class="Assimalign.MachineMigrator.AppShell"
+    Shell.FlyoutBehavior="Locked">
+
+
+    <FlyoutItem Title="Installations">
+        <ShellContent
+            Title="Installations"
+            ContentTemplate="{DataTemplate local:InstallerPage}"
+            Route="InstallationPage" />
+    </FlyoutItem>
+    <FlyoutItem Title="Automation">
+        <ShellContent
+            Title="Automation"
+            ContentTemplate="{DataTemplate local:InstallerPage}"
+            Route="InstallationPage" />
+    </FlyoutItem>
+</Shell>

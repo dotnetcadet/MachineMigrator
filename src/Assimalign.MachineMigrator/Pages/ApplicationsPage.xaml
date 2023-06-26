@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:AppPage="http://schemas.microsoft.com/winfx/2009/xaml"
+             AppPage:Class="Assimalign.MachineMigrator.Pages.ApplicationsPage"
+             Title="Applications">
+    <StackLayout Padding="20">
+        <SearchBar Margin="0,0,0,20" TextChanged="OnTypeAhead"/>
+        <ListView AppPage:Name="Installers">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid ColumnSpacing="10" RowSpacing="5" Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="25"/>
+                                <RowDefinition Height="25"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>   
+                            <CheckBox Grid.Column="0" 
+                                      Grid.RowSpan="2"/>
+                            <Image Source="{Binding Image}"
+                                   Grid.Column="1"
+                                   Grid.RowSpan="2"/>
+                            <Label Text="{Binding Name}" 
+                                   Grid.Column="2"
+                                   Grid.Row="0"/>
+                            <Label Text="{Binding Description}"
+                                   FontSize="Caption"
+                                   Grid.Column="2"
+                                   Grid.Row="2"/>
+
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
